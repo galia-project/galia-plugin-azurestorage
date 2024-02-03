@@ -1,0 +1,15 @@
+source.AzureBlobStorageSource.endpoint:
+source.AzureBlobStorageSource.account_name: cantaloupe
+source.AzureBlobStorageSource.account_key:
+source.AzureBlobStorageSource.container_name: images
+source.AzureBlobStorageSource.lookup_strategy: BasicLookupStrategy
+source.AzureBlobStorageSource.chunking.enabled: true
+source.AzureBlobStorageSource.chunking.chunk_size: 512K
+source.AzureBlobStorageSource.chunking.cache.enabled: true
+source.AzureBlobStorageSource.chunking.cache.max_size: 10M
+
+cache.AzureBlobStorageCache.endpoint:
+cache.AzureBlobStorageCache.account_name: cantaloupe
+cache.AzureBlobStorageCache.account_key:
+cache.AzureBlobStorageCache.container_name: test
+cache.AzureBlobStorageCache.blob_name_prefix: test

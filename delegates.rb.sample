@@ -1,0 +1,22 @@
+##
+# This sample Ruby delegate script contains a stub for AzureBlobStorageSource.
+# In order to use DelegateLookupStrategy with this source, simply copy the
+# method below into your main delegate class and implement it there.
+#
+class CustomDelegate
+
+  ##
+  # N.B.: this method should not try to perform authorization. `authorize()`
+  # should be used instead.
+  #
+  # @param options [Hash] Empty hash.
+  # @return [Hash<String,Object>,nil] Hash containing `container` and `name`
+  #         keys. It may also contain an `endpoint` key, indicating that the
+  #         endpoint is different from the one set in the configuration. In
+  #         that case, it may also contain `account_name` and `account_key`
+  #         keys.
+  #
+  def azureblobstoragesource_blob_info(options = {})
+  end
+
+end

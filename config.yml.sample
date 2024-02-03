@@ -1,0 +1,56 @@
+##
+# This file contains all of the configuration keys used by
+# AzureBlobStorageSource and AzureBlobStorageCache.
+# Simply copy them into your main application configuration.
+#
+
+#----------------------------------------
+# AzureBlobStorageSource
+#----------------------------------------
+
+# !! Leave blank to use Microsoft Azure.
+source.AzureBlobStorageSource.endpoint:
+
+# !! Name of your Azure account.
+source.AzureBlobStorageSource.account_name:
+
+# !! Azure account key (optional). If left blank, different authentication
+# strategies can be used (see the README).
+source.AzureBlobStorageSource.account_key:
+
+# !! Name of the container containing images to be served.
+source.AzureBlobStorageSource.container_name:
+
+# Tells AzureBlobStorageSource how to look up objects. Allowed values are
+# `BasicLookupStrategy` and `DelegateLookupStrategy`. DelegateLookupStrategy
+# uses a delegate method for dynamic lookups; see the Guide.
+source.AzureBlobStorageSource.lookup_strategy: BasicLookupStrategy
+
+# Read data in chunks when it may be more efficient. (This also may end up
+# being less efficient, depending on many variables; see the Guide.)
+# When this is enabled, it is recommended to also enable the chunk cache
+# (source.chunk_cache.enabled = true).
+source.AzureBlobStorageSource.chunking.enabled: true
+
+# Chunk size.
+source.AzureBlobStorageSource.chunking.chunk_size: 512K
+
+#----------------------------------------
+# AzureBlobStorageCache
+#----------------------------------------
+
+# !! Leave blank to use Microsoft Azure.
+cache.AzureBlobStorageCache.endpoint:
+
+# !! Name of your Azure account.
+cache.AzureBlobStorageCache.account_name:
+
+# !! Azure account key (optional). If left blank, different authentication
+# strategies can be used (see the README).
+cache.AzureBlobStorageCache.account_key:
+
+# Name of the container containing cached images.
+cache.AzureBlobStorageCache.container_name:
+
+# String that will be prefixed to blob names.
+cache.AzureBlobStorageCache.blob_name_prefix:
